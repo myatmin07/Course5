@@ -91,7 +91,7 @@ def main(message):
                 end_time = time.time()
                 execution_time = end_time - start_time
                 bot.edit_message_text(chat_id=message.chat.id, message_id=ko, text='''Wait For Processing   
-by ➜ @strawhatchannel96 ''', reply_markup=mes)
+by ➜ @PonerDigitalService ''', reply_markup=mes)
                 
                 msg = f''' 
 𝐂𝐀𝐑𝐃: <code>{cc}</code>
@@ -102,7 +102,7 @@ by ➜ @strawhatchannel96 ''', reply_markup=mes)
 𝐂𝐨𝐮𝐧𝐭𝐫𝐲: <code>{country} - {country_flag}</code>
 
 𝐓𝐢𝐦𝐞: <code>1{"{:.1f}".format(execution_time)} second</code> 
-𝐁𝐨𝐭 𝐀𝐛𝐨𝐮𝐭: @strawhatchannel96'''
+𝐁𝐨𝐭 𝐀𝐛𝐨𝐮𝐭: @PonerDigitalService'''
                 
                 print(last)
                 if 'succeeded' in last:
@@ -125,7 +125,7 @@ by ➜ @strawhatchannel96 ''', reply_markup=mes)
 𝐂𝐨𝐮𝐧𝐭𝐫𝐲: <code>{country} - {country_flag}</code>
 
 𝐓𝐢𝐦𝐞: <code>1{"{:.1f}".format(execution_time)} second</code> 
-𝐁𝐨𝐭 𝐀𝐛𝐨𝐮𝐭: @strawhatchannel96'''
+𝐁𝐨𝐭 𝐀𝐛𝐨𝐮𝐭: @PonerDigitalService'''
                     lowfund += 1
                     bot.reply_to(message, msg)
                     
