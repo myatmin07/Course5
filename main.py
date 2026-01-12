@@ -65,14 +65,14 @@ def main(message):
 					print(e)
 					last = 'missing payment form'
 				mes = types.InlineKeyboardMarkup(row_width=1)
-				cm1 = types.InlineKeyboardButton(f"• {cc} •", callback_data='u8')
-				status = types.InlineKeyboardButton(f"• STATUS ➜ {last} •", callback_data='u8')
-				cm3 = types.InlineKeyboardButton(f"• CHARGED ➜ [ {ch} ] •", callback_data='x')
-				cm4 = types.InlineKeyboardButton(f"• CCN ➜ [ {ccn} ] •", callback_data='x')
-				cm5 = types.InlineKeyboardButton(f"• CVV ➜ [ {cvv} ] •", callback_data='x')
-				cm6 = types.InlineKeyboardButton(f"• LOW FUNDS ➜ [ {lowfund} ] •", callback_data='x')
-				cm7 = types.InlineKeyboardButton(f"• DECLINED ➜ [ {dd} ] •", callback_data='x')
-				cm8 = types.InlineKeyboardButton(f"• TOTAL ➜ [ {total} ] •", callback_data='x')
+				cm1 = types.InlineKeyboardButton(f" {cc} ", callback_data='u8')
+				status = types.InlineKeyboardButton(f" STATUS ➜ {last} ", callback_data='u8')
+				cm3 = types.InlineKeyboardButton(f" CHARGED ➜ [ {ch} ] ", callback_data='x')
+				cm4 = types.InlineKeyboardButton(f" CCN ➜ [ {ccn} ] ", callback_data='x')
+				cm5 = types.InlineKeyboardButton(f" CVV ➜ [ {cvv} ] ", callback_data='x')
+				cm6 = types.InlineKeyboardButton(f" LOW FUNDS ➜ [ {lowfund} ] ", callback_data='x')
+				cm7 = types.InlineKeyboardButton(f" DECLINED ➜ [ {dd} ] ", callback_data='x')
+				cm8 = types.InlineKeyboardButton(f" TOTAL ➜ [ {total} ] ", callback_data='x')
 				stop=types.InlineKeyboardButton(f"[ STOP ]", callback_data='stop')
 				mes.add(cm1,status, cm3, cm4, cm5, cm6, cm7, cm8, stop)
 				end_time = time.time()
@@ -91,7 +91,7 @@ by ➜ @strawhatchannel96 ''', reply_markup=mes)
 𝐁𝐨𝐭 𝐀𝐛𝐨𝐮𝐭: @strawhatchannel96'''
 				
 				print(last)
-				if 'Succeeded' in last:
+				if 'succeeded' in last:
 					ch += 1
 					bot.reply_to(message, msg)
 					
@@ -134,7 +134,7 @@ by ➜ @strawhatchannel96 ''', reply_markup=mes)
 					time.sleep(5)
 	except Exception as e:
 		print(e)
-	bot.edit_message_text(chat_id=message.chat.id, message_id=ko, text='CHECKED ✅\nBOT BY ➜ @strawhatchannel96')
+	bot.edit_message_text(chat_id=message.chat.id, message_id=ko, text='CHECKED ✅\nBOT BY ➜ @PonerDigitalService')
 @bot.callback_query_handler(func=lambda call: call.data == 'stop')
 def menu_callback(call):
 	with open("stop.stop", "w") as file:
